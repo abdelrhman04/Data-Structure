@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsoleApp1;
+using System;
 
 namespace HelloWorld
 {
@@ -6,21 +7,26 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            int[] arr = new int[7]{ 1,2,3,4,5,6,7}; 
-            Console.WriteLine("Enter Number ");
-            int Number =int.Parse(Console.ReadLine());
+            
+            //int[] arr = new int[7]{ 1,2,3,4,5,6,7}; 
+            //Console.WriteLine("Enter Number ");
+            //int Number =int.Parse(Console.ReadLine());
             //int Status= linearseacher(arr, Number);
-            int Status = binarysearch(arr, Number);
-            if (Status != -1)
-            {
-                Console.WriteLine("Find " + Number + " In Index : " + Status);
-            }
-            else
-            {
-                Console.WriteLine("Not Found This Number");
-
-            }
-
+            //int Status = binarysearch(arr, Number);
+            //if (Status != -1)
+            //{
+            //    Console.WriteLine("Find " + Number + " In Index : " + Status);
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Not Found This Number");
+            //}
+            Node one = new Node(1);
+            Node two = new Node(2);
+            Node three = new Node(3);
+            one.Next = two;
+            two.Next = three;
+            Console.WriteLine(one.Next.Data);
         }
         public static int linearseacher(int[] number ,int n)
         {
