@@ -26,6 +26,8 @@ namespace HelloWorld
             Node three = new Node(3);
             one.Next = two;
             two.Next = three;
+            List s = new List();
+            s.AddList(5);
             Console.WriteLine(one.Next.Data);
         }
         public static int linearseacher(int[] number ,int n)
